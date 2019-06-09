@@ -12,7 +12,7 @@ special_character = c(" ","!","#","$","%","&","'",
                       ";","<","=",">","?","@","[",
                       "]","^","_","`","{","|","}","~")
 
-### split ###
+### split digit into 4 randomly numbered parts ###
 x = rmultinom(n=1,size = n, prob = rep(0.25,4))
 
 num_digit = x[1,]
@@ -29,7 +29,7 @@ large = sample(LETTERS, size = large_alpha_digit, replace =TRUE)
 special = sample(special_character, size = special_digit, replace = TRUE)
 
 
-
+### recombine to generate string ###
 combined = c(num, small, large, special)
 
 remix  = sample(combined)
